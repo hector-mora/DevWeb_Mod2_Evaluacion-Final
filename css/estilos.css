@@ -1,0 +1,151 @@
+* {
+  font-family: "Dancing Script";
+}
+img {
+  box-shadow: 2px 2px #02010a;
+}
+
+body {
+  background-color: #02010a;
+}
+
+header {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #5b7989;
+  border-radius: 10px 10px 0px 0px;
+  display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+
+.titulo {
+  width: 100%;
+  padding-top: 6vw;
+  padding-bottom: 2vw;
+  text-align: center;
+}
+
+.titulo h1{
+  color: white;
+  font-size: 2.5em;
+  margin: 0;
+  padding-left: 4%;
+  padding-right: 4%;
+  text-shadow: 2px 2px #02010a;
+}
+
+.menu {
+  width: 100%;
+  padding-top: 2vw;
+  padding-bottom: 6vw;
+  text-align: center;
+}
+
+#menu-principal a {
+  color: white;
+  font-size: 1.5em;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.contenido {
+	width: 100%;
+  margin: 0;
+  padding: 0;
+  display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+
+.portada {
+	width: 100%;
+  background-color: #82c3a6;
+}
+
+.portada figure img {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 4%;
+  margin-right: 43%;
+  width: 92%;
+  height: 96%;
+}
+
+.paisajes {
+  width: 100%;
+  background-color: #d5c75f;
+}
+
+.paisajes figure img {
+  margin-top: 4%;
+  margin-bottom: 4%;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+  height: 92%;
+}
+
+.paisajes figure figcaption {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.retratos {
+  width: 100%;
+  background-color: #d5c75f;
+}
+
+.retratos figure img {
+  margin-top: 4%;
+  margin-bottom: 4%;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+  height: 92%;
+}
+
+.retratos figure figcaption {
+  text-align: center;
+  text-decoration: underline;
+  tx
+}
+
+@media (min-width: 900px) {
+  header {
+    width: 900px;
+    margin: auto;
+    padding: 0;
+  }
+
+  .titulo {
+    width: 50%;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    text-align: left;
+  }
+
+  .titulo h1 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu {
+    width: 50%;
+    padding-top: 3.4vw;
+    padding-bottom: 1.6vw;
+  }
+
+  .paisajes, .retratos {
+    width: 50%;
+  }
+
+	.contenido {
+		width: 900px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
