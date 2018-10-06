@@ -1,26 +1,40 @@
-* {
-  font-family: "Dancing Script";
-}
-img {
-  box-shadow: 2px 2px #02010a;
-}
-
+/* cuerpo de la pagina */
 body {
   background-color: #02010a;
+  font-family: "Dancing Script";
 }
 
+/* animacion de deslizado de abajo hacia arriba */
+@-webkit-keyframes deslizar-animacion {
+  0% {
+		position: relative;
+    margin-top: 150%;
+	}
+	60% {
+		position: relative;
+    margin-top: -5%;
+	}
+	100% {
+		position: relative;
+    margin-top: 0%;
+	}
+}
+
+/* cabecera de la pagina */
 header {
   width: 100%;
-  margin: 0;
-  padding: 0;
+  margin: auto;
   background-color: #5b7989;
   border-radius: 10px 10px 0px 0px;
+  animation-name: deslizar-animacion;
+  animation-duration: 1s;
   display: -webkit-flex;
 	display: flex;
-	-webkit-flex-flow: row wrap;
-	flex-flow: row wrap;
+	-webkit-flex-direction: column;
+	flex-direction: column;
 }
 
+/* titulo de la cabecera*/
 .titulo {
   width: 100%;
   padding-top: 6vw;
@@ -37,6 +51,7 @@ header {
   text-shadow: 2px 2px #02010a;
 }
 
+/* menu de la cabecera*/
 .menu {
   width: 100%;
   padding-top: 2vw;
@@ -50,102 +65,265 @@ header {
   padding-left: 1%;
   padding-right: 1%;
 }
+/*FIN cabecera de la pagina*/
 
+/* area de contenido de la pagina*/
 .contenido {
 	width: 100%;
-  margin: 0;
+  margin: auto;
   padding: 0;
+  box-shadow: 2px 2px #02010a;
   display: -webkit-flex;
 	display: flex;
-	-webkit-flex-flow: row wrap;
-	flex-flow: row wrap;
+	-webkit-flex-direction: column;
+	flex-direction: column;
 }
 
+/* todas las imagenes del contenido*/
+.contenido img {
+  box-shadow: 2px 2px #02010a;
+}
+
+/* seccion portada del contenido*/
 .portada {
 	width: 100%;
   background-color: #82c3a6;
 }
 
+/* todas las imagenes de la portada*/
 .portada figure img {
-  margin-top: 2%;
-  margin-bottom: 2%;
-  margin-left: 4%;
-  margin-right: 43%;
-  width: 92%;
-  height: 96%;
+  width: 100%;
 }
 
+/* seccion de imagenes secundarias del contenido*/
+.secundaria {
+  width: 100%;
+  margin: auto;
+  background-color: #d5c75f;
+  border: 1px;
+  display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+
+/* seccion paisajes del contenido*/
 .paisajes {
   width: 100%;
-  background-color: #d5c75f;
-}
-
-.paisajes figure img {
-  margin-top: 4%;
-  margin-bottom: 4%;
-  margin-left: 5%;
-  margin-right: 5%;
-  width: 90%;
-  height: 92%;
-}
-
-.paisajes figure figcaption {
   text-align: center;
-  text-decoration: underline;
 }
 
+/*animacion de rotacion de imagen*/
+@-webkit-keyframes rotacion-animacion {
+  0% {
+		transform: rotate(0deg);
+    box-shadow: 2px 2px #82c3a6;
+	}
+	50% {
+		transform: rotate(10deg);
+    box-shadow: 2px 2px #82c3a6;
+	}
+	100% {
+		transform: rotate(0deg);
+    box-shadow: 2px 2px #02010a;
+	}
+}
+
+/* todas las imagenes de paisajes*/
+.paisajes img {
+  width: 100%;
+}
+
+/* animacion de paisajes*/
+.paisajes img:hover {
+  border: 2px;
+  animation-name: rotacion-animacion;
+  animation-duration: 1s;
+}
+
+/* texto de link*/
+.link {
+  font-size: 1.2em;
+  color: inherit;
+}
+/*FIN paisajes - contenido*/
+
+/*animacion de transicion de imagen*/
+@-webkit-keyframes transicion-animacion {
+  0% {
+		position: relative;
+    bottom: 0px;
+		left: 0px;
+    box-shadow: 2px 2px #82c3a6;
+	}
+	50% {
+		position: relative;
+    bottom: 5px;
+		left: 20px;
+    box-shadow: 2px 2px #82c3a6;
+	}
+	100% {
+		position: relative;
+    bottom: 0px;
+		left: 0px;
+    box-shadow: 2px 2px #02010a;
+	}
+}
+
+/* seccion retratos del contenido*/
 .retratos {
+  width: 100%;
+  text-align: center;
+}
+
+/* todas las imagenes de retratos*/
+.retratos img {
+  width: 100%;
+}
+
+/* animacion de retratos*/
+.retratos img:hover {
+  animation-name: transicion-animacion;
+  animation-duration: 1s;
+}
+/*FIN area de contenido de la pagina*/
+
+/* pie de pagina*/
+footer {
+  width: 100%;
+  margin: auto;
+  background-color: #C6d5c5;
+  text-shadow: 0.5px 0.5px #02010a;
+  border-radius: 0px 0px 10px 10px;
+  display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+
+/* secciones del pie de pagina*/
+.contacto, .termino, .red-social, .derechos {
+  width: 100%;
+  margin: 0;
+  padding-top: 4vw;
+  padding-bottom: 4vw;
+}
+
+/* titulos del pie de pagina*/
+footer h1 {
+  margin: auto;
+  padding-left: 6vw;
+}
+
+/* parrafos del pie de pagina*/
+footer p {
+  margin: auto;
+  padding-left: 7vw;
+  padding-top: 1vw;
+  color: inherit;
+}
+/*FIN pie de pagina*/
+
+/*INICIO: paisajes.html y retratos.html*/
+.Img1, .Img2, .Img3, .Img4, .Img5, .Img6 {
   width: 100%;
   background-color: #d5c75f;
 }
 
-.retratos figure img {
-  margin-top: 4%;
-  margin-bottom: 4%;
-  margin-left: 5%;
-  margin-right: 5%;
-  width: 90%;
-  height: 92%;
+.Img1 img {
+  width: 100%;
+  -webkit-filter:blur(10px);
+  filter:blur(10px);
 }
 
-.retratos figure figcaption {
-  text-align: center;
-  text-decoration: underline;
-  tx
+.Img3 img {
+  width: 100%;
+  -webkit-filter:sepia(100%);
+  filter:sepia(100%);
 }
 
-@media (min-width: 900px) {
+.Img5 img {
+  width: 100%;
+}
+
+.Img2 img, .Img4 img, .Img6 img {
+  width: 100%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+/*FIN: paisajes.html y retratos.html*/
+
+/*configuracion para escritorio*/
+@media screen and (min-width: 900px) {
   header {
     width: 900px;
     margin: auto;
-    padding: 0;
+  	-webkit-flex-flow: row wrap;
+  	flex-flow: row wrap;
   }
 
   .titulo {
-    width: 50%;
+    width: 70%;
     padding-top: 2vw;
     padding-bottom: 2vw;
     text-align: left;
   }
 
   .titulo h1 {
-    margin: 0;
-    padding: 0;
+    padding-left: 2vw;
+    padding-right: 0;
   }
 
   .menu {
-    width: 50%;
+    width: 30%;
     padding-top: 3.4vw;
     padding-bottom: 1.6vw;
+  }
+
+  .contenido {
+    width: 900px;
+    margin: auto;
+  	-webkit-flex-flow: row wrap;
+  	flex-flow: row wrap;
+  }
+
+  /* seccion de imagenes secundarias del contenido*/
+  .secundaria {
+    width: 100%;
+    background-color: #d5c75f;
+    border: 1px;
+  	-webkit-flex-flow: row wrap;
+  	flex-flow: row wrap;
   }
 
   .paisajes, .retratos {
     width: 50%;
   }
 
-	.contenido {
-		width: 900px;
-		margin-left: auto;
-		margin-right: auto;
-	}
+  footer {
+    width: 900px;
+  	-webkit-flex-flow: row wrap;
+  	flex-flow: row wrap;
+  }
+
+  .contacto, .termino, .red-social, .derechos {
+    width: 25%;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+  }
+
+  footer h1 {
+    padding-left: 3vw;
+  }
+
+  footer p {
+    padding-left: 4vw;
+  }
+
+  /*INICIO: paisajes.html y retratos.html*/
+  .Img1, .Img2, .Img3, .Img4, .Img5, .Img6 {
+    width: 33.32%;
+  }
+  /*FIN: paisajes.html y retratos.html*/
 }
+/* FIN configuracion para escritorio*/
